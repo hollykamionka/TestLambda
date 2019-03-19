@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage ('zip') {
       steps() {
-        sh 'zip mylambda.zip mylambda.py'
+        sh 'zip mylambda.zip https://github.com/hollykamionka/TestLambda/mylambda.py'
       }
     }
     stage ('deliver') {
