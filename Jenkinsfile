@@ -1,4 +1,7 @@
 pipeline {
+  agent any
+    tools {
+    }
   stages {
     stage ('zip') {
       steps() {
