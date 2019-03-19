@@ -6,12 +6,12 @@ pipeline {
   stages {
     stage ('zip') {
       steps() {
-        sh 'zip mylambda.zip https://github.com/hollykamionka/TestLambda/mylambda.py'
+        sh 'zip mylambda.zip mylambda.py'
       }
     }
     stage ('deliver') {
       steps() {
-        sh 'aws s3 cp target/mylambda.zip s3://sme-artifact-bucket/mylambda.zip --region us-west-2'
+        sh 'aws s3 cp mylambda.zip s3://sme-artifact-bucket/mylambda.zip --region us-west-2'
       }
     }  
     stage ('deploy') {
