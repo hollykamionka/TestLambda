@@ -1,6 +1,7 @@
 pipeline {
   agent any
     tools {
+      maven 'Maven3.5.4'
     }
   stages {
     stage ('zip') {
